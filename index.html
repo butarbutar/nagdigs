@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desa Maju — Website Resmi</title>
+  <meta name="description" content="Website resmi Desa Maju — informasi, pelayanan, berita, agenda, dan galeri.">
+  <meta name="author" content="Admin Desa">
+  <style>
+    /* Reset sederhana */
+    :root{--accent:#095d40;--muted:#666;--glass: rgba(0,0,0,0.06);--radius:12px}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#111;background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--accent);text-decoration:none}
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;gap:16px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:48px;height:48px;background:linear-gradient(135deg,var(--accent) 0%,#007b5e 100%);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav ul{display:flex;gap:10px;list-style:none;margin:0;padding:0}
+    .cta{margin-left:auto}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600}
+    .muted{color:var(--muted)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero h1{font-size:28px;margin:0 0 12px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .card{background:#fff;border:1px solid #f0f0f0;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.03)}
+
+    /* Quick links */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .quick{display:flex;gap:12px;align-items:center}
+    .icon{width:44px;height:44px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center}
+
+    /* Section style */
+    section{padding:40px 0;border-top:1px solid #fafafa}
+    h2.section-title{margin:0 0 12px;font-size:20px}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:20px}
+
+    /* News list */
+    .news-list{display:grid;gap:12px}
+    .news-item{display:flex;gap:12px;align-items:flex-start}
+    .news-item img{width:120px;height:80px;object-fit:cover;border-radius:8px}
+    .meta{font-size:13px;color:var(--muted)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+    .gallery .g{height:110px;object-fit:cover;border-radius:8px}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid #eee;margin-top:20px}
+    .flex{display:flex;gap:12px;align-items:center}
+
+    /* Responsive tweaks */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+
+    /* Form */
+    .form-row{display:flex;gap:10px}
+    .form-row input,.form-row textarea,input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Utility */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#f6fffa;border:1px solid rgba(9,93,64,0.06);color:var(--accent);font-weight:600}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">DM</div>
+        <div>
+          <div style="font-weight:700">Desa Maju</div>
+          <div class="small muted">Kecamatan Contoh — Kabupaten Contoh</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#pelayanan">Pelayanan</a></li>
+          <li><a href="#berita">Berita</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn" href="#kontak">Ajukan Layanan</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:8px"><span class="badge">Resmi</span><div class="small muted">Informasi & Pelayanan Publik</div></div>
+        <h1>Selamat datang di Website Resmi Desa Maju</h1>
+        <p>Temukan berita, pengumuman, layanan administrasi, profil desa, agenda kegiatan, dan galeri foto. Situs ini dibuat untuk memudahkan warga dan pemerintahan desa saling terhubung.</p>
+
+        <div class="grid">
+          <div class="card">
+            <strong>Pelayanan Publik</strong>
+            <p class="small muted" style="margin:8px 0 0">Sertifikat, KTP, KK, surat keterangan, dan layanan online lainnya — daftar dan cek status permohonan.</p>
+          </div>
+
+          <div class="card">
+            <strong>Agenda & Pengumuman</strong>
+            <p class="small muted" style="margin:8px 0 0">Jadwal musyawarah, posyandu, kerja bakti, dan kegiatan desa.</p>
+          </div>
+
+          <div class="card">
+            <strong>Peta & Kontak</strong>
+            <p class="small muted" style="margin:8px 0 0">Lokasi kantor desa dan cara menghubungi aparat desa.</p>
+          </div>
+
+          <div class="card">
+            <strong>Galeri</strong>
+            <p class="small muted" style="margin:8px 0 0">Foto kegiatan, dokumentasi pembangunan, dan budaya lokal.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Info Singkat</h3>
+          <p class="small muted">Nama Desa: <strong>Desa Maju</strong><br> Kepala Desa: <strong>Drs. Contoh</strong><br>Populasi (estimasi): <strong>3.200</strong></p>
+          <hr style="border:none;border-top:1px dashed #eee;margin:12px 0">
+          <div>
+            <strong>Kontak Kantor Desa</strong>
+            <div class="small muted">Jl. Raya Desa No.1 — Telp: (0751) 123456</div>
+          </div>
+          <div style="margin-top:12px">
+            <a href="#pelayanan" class="small">Lihat Pelayanan &rarr;</a>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="card">
+          <h4 style="margin:0 0 6px">Peta</h4>
+          <!-- Ganti src iframe dengan link Google Maps embed lokasi desa Anda -->
+          <div style="width:100%;height:200px;overflow:hidden;border-radius:8px;background:#f7f7f7;display:flex;align-items:center;justify-content:center;color:var(--muted)">Peta (ganti dengan embed Google Maps)</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="profil">
+      <h2 class="section-title">Profil Desa</h2>
+      <div class="two-col">
+        <div>
+          <p class="muted">Desa Maju adalah desa yang berlokasi di Kecamatan Contoh, Kabupaten Contoh. Desa ini dikenal dengan potensi pertanian, kerajinan lokal, serta kegiatan budaya tahunan yang melibatkan seluruh warga.</p>
+
+          <h3>Tugas & Fungsi Pemerintahan Desa</h3>
+          <ul>
+            <li>Penyelenggaraan pemerintahan desa</li>
+            <li>Pembinaan kemasyarakatan</li>
+            <li>Pemberdayaan masyarakat</li>
+            <li>Pelayanan administrasi kependudukan</li>
+          </ul>
+
+          <h3>Struktur Organisasi</h3>
+          <p class="small muted">Kepala Desa — Sekretaris — Kepala Urusan — Kepala Dusun — Perangkat Desa</p>
+        </div>
+
+        <aside class="card">
+          <h4 style="margin-top:0">Jam Layanan</h4>
+          <p class="small">Senin — Jumat: 08:00 — 15:00<br>Sabtu: 08:00 — 12:00<br>Minggu: Libur</p>
+          <div style="margin-top:12px"><a class="small" href="#kontak">Hubungi Kami</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="pelayanan">
+      <h2 class="section-title">Pelayanan Publik</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Surat Keterangan</strong>
+          <p class="small muted">Permohonan SKTM, SKCK, dan lain-lain — ajukan melalui formulir atau datang langsung.</p>
+        </div>
+        <div class="card">
+          <strong>Pencatatan Kependudukan</strong>
+          <p class="small muted">Pembuatan/Perubahan KTP, KK, Akta Kelahiran.</p>
+        </div>
+        <div class="card">
+          <strong>Perijinan Sederhana</strong>
+          <p class="small muted">Izin usaha mikro, kegiatan, dan fasilitas desa.</p>
+        </div>
+        <div class="card">
+          <strong>Pengaduan & Aspirasi</strong>
+          <p class="small muted">Sampaikan pengaduan via formulir di bawah atau kunjungi kantor desa.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:16px" class="card">
+        <h4 style="margin:0 0 8px">Formulir Pengaduan</h4>
+        <form id="complaintForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input type="text" id="name" placeholder="Nama lengkap" required>
+            <input type="text" id="phone" placeholder="No. Telepon / WA" required>
+          </div>
+          <div style="margin-top:8px">
+            <textarea id="message" rows="4" placeholder="Tuliskan keluhan atau aspirasi Anda" required></textarea>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+            <button class="btn" type="submit">Kirim</button>
+            <div class="small muted">Pengaduan akan tercatat secara lokal saja (demo)</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="berita">
+      <h2 class="section-title">Berita Terbaru</h2>
+      <div class="news-list">
+        <article class="news-item card">
+          <img src="https://via.placeholder.com/300x200?text=Berita+1" alt="Berita 1">
+          <div>
+            <h3 style="margin:0 0 6px">Pembangunan Jalan Desa Selesai</h3>
+            <div class="meta">12 Agustus 2025 — Oleh: Admin Desa</div>
+            <p class="small muted" style="margin:6px 0 0">Pekerjaan perbaikan akses jalan antar-dusun telah selesai dan saat ini dapat dilewati kendaraan roda empat.</p>
+          </div>
+        </article>
+
+        <article class="news-item card">
+          <img src="https://via.placeholder.com/300x200?text=Berita+2" alt="Berita 2">
+          <div>
+            <h3 style="margin:0 0 6px">Posyandu Bulan Ini</h3>
+            <div class="meta">5 Agustus 2025 — Oleh: Bidan Desa</div>
+            <p class="small muted" style="margin:6px 0 0">Jangan lupa membawa balita ke posyandu untuk penimbangan dan imunisasi.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeri">
+      <h2 class="section-title">Galeri Foto</h2>
+      <div class="gallery">
+        <!-- Ganti src gambar dengan link GitHub/raw atau CDN Anda. gunakan ?raw=true bila dari GitHub -->
+        <img class="g" src="https://via.placeholder.com/300x200?text=Foto+1" alt="Foto 1">
+        <img class="g" src="https://via.placeholder.com/300x200?text=Foto+2" alt="Foto 2">
+        <img class="g" src="https://via.placeholder.com/300x200?text=Foto+3" alt="Foto 3">
+        <img class="g" src="https://via.placeholder.com/300x200?text=Foto+4" alt="Foto 4">
+      </div>
+    </section>
+
+    <section id="kontak">
+      <h2 class="section-title">Kontak & Lokasi</h2>
+      <div class="two-col">
+        <div>
+          <p class="muted">Untuk pertanyaan administrasi, layanan, atau pengaduan, silakan isi formulir berikut atau hubungi nomor kantor desa.</p>
+
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <div class="form-row">
+              <input type="text" id="cname" placeholder="Nama" required>
+              <input type="email" id="cemail" placeholder="Email (opsional)">
+            </div>
+            <div style="margin-top:8px">
+              <input type="text" id="ctopic" placeholder="Topik / Perihal" required>
+            </div>
+            <div style="margin-top:8px">
+              <textarea id="cmsg" rows="5" placeholder="Pesan Anda" required></textarea>
+            </div>
+            <div style="margin-top:8px"><button class="btn">Kirim Pesan</button></div>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h4 style="margin-top:0">Kantor Desa</h4>
+          <p class="small muted">Jl. Raya Desa No.1<br>Desa Maju, Kec. Contoh, Kab. Contoh</p>
+          <p class="small muted">Telepon: (0751) 123456<br>Email: desa@contoh.id</p>
+          <div style="margin-top:8px"><a href="mailto:desa@contoh.id" class="small">Kirim Email</a></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong>Desa Maju</strong>
+          <div class="small muted">© 2025 Pemerintah Desa Maju — Semua hak dilindungi</div>
+        </div>
+        <div class="small muted">Dibuat dengan ❤️ untuk masyarakat</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Demo: simpan pengaduan & kontak ke localStorage (untuk contoh saja)
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name||!phone||!message) return alert('Lengkapi semua kolom.');
+      const list = JSON.parse(localStorage.getItem('pengaduan')||'[]');
+      list.unshift({name,phone,message,date:new Date().toISOString()});
+      localStorage.setItem('pengaduan',JSON.stringify(list));
+      alert('Terima kasih. Pengaduan Anda telah dicatat (demo).');
+      e.target.reset();
+    }
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('cname').value.trim();
+      const email = document.getElementById('cemail').value.trim();
+      const topic = document.getElementById('ctopic').value.trim();
+      const msg = document.getElementById('cmsg').value.trim();
+      if(!name||!topic||!msg) return alert('Lengkapi semua kolom.');
+      const list = JSON.parse(localStorage.getItem('kontak')||'[]');
+      list.unshift({name,email,topic:topic,msg,date:new Date().toISOString()});
+      localStorage.setItem('kontak',JSON.stringify(list));
+      alert('Pesan terkirim (demo). Terima kasih!');
+      e.target.reset();
+    }
+
+    // Simple smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
